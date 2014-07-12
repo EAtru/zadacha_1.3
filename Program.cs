@@ -29,7 +29,7 @@ namespace задача_3
                 int buf = k + 1;
 
                 int s = 0;
-                for (int i = 0; i < mass.Length; i++)
+                for (int i = 1; i < mass.Length; i++)
                 {
                     if (i <= k)
                         mass[i] = A[i];
@@ -44,6 +44,7 @@ namespace задача_3
                         mass[i] = A[buf];
                         buf++;
                     }
+                   
                 }
             }
             foreach (int ar in mass)
