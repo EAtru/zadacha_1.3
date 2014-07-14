@@ -26,19 +26,19 @@ namespace задача_3
             if (k > 0 && k < A.Length)
             {
 
-                int buf = k + 1;
+                int buf = k - 1;
 
                 int s = 0;
-                for (int i = 1; i < mass.Length; i++)
+                for (int i = 0; i < mass.Length; i++)
                 {
-                    if (i <= k)
+                    if (i <= buf)
                         mass[i] = A[i];
-                    if (i > k && i <= k + B.Length)
+                    if (i > buf && i <= buf + B.Length)
                     {
                         mass[i] = B[s];
                         s++;
                     }
-                    if (i > k + B.Length)
+                    if (i > buf + B.Length)
                     {
 
                         mass[i] = A[buf];
